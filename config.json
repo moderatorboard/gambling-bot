@@ -1,0 +1,98 @@
+{
+    "bot": {
+        "name": "Economy Casino Bot",
+        "version": "1.0.0",
+        "description": "A comprehensive Discord economy and casino bot",
+        "prefix": "!",
+        "case_insensitive": true,
+        "sync_commands_on_startup": true
+    },
+    "database": {
+        "path": "economy_bot.db",
+        "backup_enabled": true,
+        "backup_interval_hours": 24
+    },
+    "economy": {
+        "starting_balance": 1000,
+        "starting_crypto": 0,
+        "max_bet_percentage": 50,
+        "daily_reward_base": 100,
+        "weekly_reward_base": 1000,
+        "monthly_reward_base": 5000,
+        "work_reward_min": 50,
+        "work_reward_max": 300,
+        "level_xp_multiplier": 100
+    },
+    "games": {
+        "blackjack": {
+            "min_bet": 10,
+            "max_bet": 50000,
+            "blackjack_multiplier": 2.5,
+            "win_multiplier": 2.0,
+            "cooldown_seconds": 45
+        },
+        "coinflip": {
+            "min_bet": 1,
+            "max_bet": 100000,
+            "win_multiplier": 2.0,
+            "cooldown_seconds": 15
+        },
+        "slots": {
+            "min_bet": 5,
+            "max_bet": 75000,
+            "cooldown_seconds": 30
+        },
+        "dice": {
+            "min_bet": 1,
+            "max_bet": 50000,
+            "cooldown_seconds": 20
+        },
+        "crash": {
+            "min_bet": 10,
+            "max_bet": 100000,
+            "max_multiplier": 50.0,
+            "cooldown_seconds": 60
+        }
+    },
+    "cooldowns": {
+        "daily": 86400,
+        "weekly": 604800,
+        "monthly": 2592000,
+        "work": 14400,
+        "overtime": 28800,
+        "vote": 43200
+    },
+    "features": {
+        "gambling_enabled": true,
+        "trading_enabled": true,
+        "leaderboards_enabled": true,
+        "prestige_enabled": true,
+        "shop_enabled": true,
+        "lottery_enabled": true,
+        "mining_enabled": false
+    },
+    "limits": {
+        "max_transfer_amount": 1000000,
+        "max_daily_games": 1000,
+        "max_inventory_items": 100,
+        "max_leaderboard_entries": 100
+    },
+    "messages": {
+        "welcome_message": "Welcome to the casino! Type `/help` to get started.",
+        "level_up_message": "🆙 Congratulations! You reached level {level}!",
+        "jackpot_message": "🎰 JACKPOT! You won {amount} coins!",
+        "bankruptcy_message": "💸 You're broke! Use `/daily` to get some starting coins."
+    },
+    "webhooks": {
+        "error_webhook": null,
+        "transactions_webhook": null,
+        "jackpots_webhook": null
+    },
+    "logging": {
+        "level": "INFO",
+        "log_to_file": true,
+        "log_file": "bot.log",
+        "max_log_size_mb": 50,
+        "backup_count": 5
+    }
+}
